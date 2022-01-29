@@ -1,0 +1,24 @@
+package classes
+
+// consigo instanciar, atribuir e alterar o dado
+class Pessoa1(var nome: String)
+
+// consigo instanciar e atribuir o dado
+class Pessoa2(val nome: String)
+
+// nao consigo acessar e atribuir o dado
+class Pessoa3(nomeInicial: String) {
+    val nome: String = nomeInicial
+}
+
+fun main(args: Array<String>) {
+    val p1 = Pessoa1(nome = "Dani")
+    p1.nome = "Grazi"
+    println("${p1.nome} sabe programar!")
+
+    val p2 = Pessoa2("Maria")
+    val p3 = Pessoa3(nomeInicial = "Pedro")
+
+    println("${p2.nome} e ${p3.nome} sao legais!")
+
+}
